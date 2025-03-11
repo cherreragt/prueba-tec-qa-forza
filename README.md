@@ -49,3 +49,6 @@ http://localhost:3000/#
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tu_video_id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Se debe modificar la ruta del driver del actor segun la versión de google.
+
+https://github.com/cherreragt/prueba-tec-qa-forza/blob/master/actor1/actor.yaml
