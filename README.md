@@ -47,7 +47,8 @@ http://localhost:3000/#
 
 ## Video de la automatizacion: 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/opBSs0CnZ6Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Ver el video en YouTube](https://www.youtube.com/watch?v=opBSs0CnZ6Y&ab_channel=ChristopherH.)
+
 
 ## Se debe modificar la ruta del driver del actor segun la versión de google.
 
