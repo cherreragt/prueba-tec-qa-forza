@@ -1,0 +1,9 @@
+description: Verify that a GitHub repo has a wiki section with content in it
+actions:
+  - script: |
+      var locator = $data("DemoBlaze/ChooseCategory/locators").homepage.category;
+      var tmp = {};
+      tmp.xpath = locator.xpath.replace("##category##", $macroArgs.category);
+      $runAction("org.getopentest.selenium.Click", {
+          locator: tmp
+      });

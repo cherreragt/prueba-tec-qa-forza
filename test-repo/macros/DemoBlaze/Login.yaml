@@ -1,0 +1,24 @@
+description: Verify that a GitHub repo has a wiki section with content in it
+actions:
+  - script: |
+      $runAction("org.getopentest.selenium.SendKeys", {
+            locator: $data("DemoBlaze/LogIn/locators").homepage.username,
+            text: $macroArgs.username
+      });
+      
+      $runAction("org.getopentest.selenium.SendKeys", {
+            locator: $data("DemoBlaze/LogIn/locators").homepage.password,
+            text: $macroArgs.password
+      });
+      
+      $runAction("org.getopentest.selenium.Click", {
+            locator: $data("DemoBlaze/LogIn/locators").homepage.enter
+      });
+        
+      var locator = $data("DemoBlaze/LogIn/locators").homepage.assert;
+      var tmp = {};
+      tmp.xpath = locator.xpath.replace("##username##", $macroArgs.username);
+        
+      $runAction("org.getopentest.selenium.AssertElementVisible", {
+        locator: tmp
+      });

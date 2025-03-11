@@ -1,0 +1,2 @@
+homepage:
+  category: { xpath: "//div[a[text()='CATEGORIES']]/a[text()='##category##']" }

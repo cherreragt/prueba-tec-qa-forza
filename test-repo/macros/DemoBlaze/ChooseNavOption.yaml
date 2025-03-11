@@ -1,0 +1,16 @@
+description: Verify that a GitHub repo has a wiki section with content in it
+actions:
+  - script: |
+      $delay(2000);
+      var locator = $data("DemoBlaze/ChooseNavOption/locators").homepage.item;
+      var tmp = {};
+      tmp.xpath = locator.xpath.replace("##item##", $macroArgs.item);
+      $runAction("org.getopentest.selenium.ExecuteScript", {
+        script: "var element = document.evaluate('" + tmp.xpath +"', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;" +
+          "if (element) {"+
+              "element.click();"+
+          "} else { console.log('error elemento no encontrado.'); }"
+      });
+      $localData.click = $output.text;
+      $log("resultado clic: " + $localData.click);
+      $delay(1000);

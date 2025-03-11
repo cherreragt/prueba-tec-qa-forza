@@ -1,0 +1,31 @@
+# This macro takes one single argument, called "repo", which must contain the name of
+# the repo owner and the repo itself, separated by a "/" (e.g. "facebook/react").
+description: Verify that a GitHub repo has a wiki section with content in it
+actions:
+  - script: |
+      $runAction("org.getopentest.selenium.SendKeys", {
+            locator: $data("DemoBlaze/SignUp/locators").homepage.username,
+            text: $macroArgs.username
+      });
+          
+      $runAction("org.getopentest.selenium.SendKeys", {
+            locator: $data("DemoBlaze/SignUp/locators").homepage.password,
+            text: $macroArgs.password
+      });
+        
+      $runAction("org.getopentest.selenium.Click", {
+            locator: $data("DemoBlaze/SignUp/locators").homepage.create
+      });
+      $runAction("org.getopentest.selenium.HandleModal", {
+            perform: "getText"
+      });
+      $localData.dialogText = $output.text;
+      $log("The dialog box said: " + $localData.dialogText);
+      
+      if ($localData.dialogText === null || "Sign up successful.".toLowerCase() !== $localData.dialogText.toLowerCase()) {
+            $fail("NO se creo la cuenta o el mensaje cambio.");
+      }
+      
+      
+      $delay(2000);
+

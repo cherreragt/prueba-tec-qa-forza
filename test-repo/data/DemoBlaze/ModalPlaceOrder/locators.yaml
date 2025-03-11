@@ -1,0 +1,8 @@
+homepage:
+  name: { xpath: "//div[@class='form-group' and label[text()='Name:']]/input" }
+  country: { xpath: "//div[@class='form-group' and label[text()='Country:']]/input" }
+  city: { xpath: "//div[@class='form-group' and label[text()='City:']]/input" }
+  creditCard: { xpath: "//div[@class='form-group' and label[text()='Credit card:']]/input" }
+  purchase: { xpath: "//div/button[text()='Purchase']" }
+  ok: { xpath: "//div/button[text()='OK']" }
+  assert: { xpath: "//*/h2[text()='Thank you for your purchase!']" }

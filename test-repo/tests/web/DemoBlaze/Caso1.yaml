@@ -1,0 +1,23 @@
+actors:
+  - actor: ACTOR1
+    segments:
+      - segment: 1
+        actions:
+          - macro: DemoBlaze.GoTo
+            args:
+              website: "https://www.demoblaze.com/index.html"
+
+          - macro: DemoBlaze.ChooseCategory
+            args:
+              category: "Phones"
+
+          - macro: DemoBlaze.AddToCart
+            args:
+              item: "Samsung galaxy s6"
+
+          - macro: DemoBlaze.ChooseNavOption
+            args:
+              item: Cart
+
+          - macro: DemoBlaze.PlaceOrder
+          - macro: DemoBlaze.FillModalPlaceOrder

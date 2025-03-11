@@ -1,0 +1,12 @@
+description: Verify that a GitHub repo has a wiki section with content in it
+actions:
+  - script: |
+        $runAction("org.getopentest.selenium.Click", {
+          locator: $data("DemoBlaze/PlaceOrder/locators").homepage.placeOrder
+        });
+        
+        $runAction("org.getopentest.selenium.AssertElementVisible", {
+          locator: $data("DemoBlaze/PlaceOrder/locators").homepage.assertOrderPlace
+        });
+        
+        $delay(3000);

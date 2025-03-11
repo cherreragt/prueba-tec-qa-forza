@@ -1,0 +1,30 @@
+# This macro takes one single argument, called "repo", which must contain the name of
+# the repo owner and the repo itself, separated by a "/" (e.g. "facebook/react").
+description: Verify that a GitHub repo has a wiki section with content in it
+actions:
+  - script: |
+        var locator = $data("DemoBlaze/AddToCart/locators").homepage.item;
+
+        $log("TTT: ");
+        $log(locator);
+        var tmp = {};
+        tmp.xpath = locator.xpath.replace("##item##", $macroArgs.item);
+        $log(tmp);
+        $runAction("org.getopentest.selenium.Click", {
+            locator: tmp
+        });
+        $runAction("org.getopentest.selenium.Click", {
+            locator: $data("DemoBlaze/AddToCart/locators").homepage.addToCart
+        });
+        $runAction("org.getopentest.selenium.HandleModal", {
+            perform: "getText"
+        });
+        $localData.dialogText = $output.text;
+        $log("The dialog box said: " + $localData.dialogText);
+        
+        if ($localData.dialogText === null || $localData.dialogText.toLowerCase().indexOf("Product added".toLowerCase()) === -1) {
+            $fail("El producto no se agrego al carrito o el mensaje cambio");
+        }
+        
+        $delay(4000);
+

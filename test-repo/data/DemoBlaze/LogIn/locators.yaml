@@ -1,0 +1,5 @@
+homepage:
+  username: { xpath: "(//div[label[text()='Username:']]/input)[2]" }
+  password: { xpath: "(//div[label[text()='Password:']]/input)[2]" }
+  enter: { xpath: "(//div/button[text()='Log in'])[1]" }
+  assert: { xpath: "//li/a[text()='Welcome ##username##']" }

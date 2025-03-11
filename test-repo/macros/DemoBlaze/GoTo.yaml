@@ -1,0 +1,11 @@
+# This macro takes one single argument, called "repo", which must contain the name of
+# the repo owner and the repo itself, separated by a "/" (e.g. "facebook/react").
+description: Verify that a GitHub repo has a wiki section with content in it
+actions:
+  - description: Navigate to the wiki page
+    action: org.getopentest.selenium.NavigateTo
+    args:
+      url: $macroArgs.website
+
+  - script: $delay(5000);
+

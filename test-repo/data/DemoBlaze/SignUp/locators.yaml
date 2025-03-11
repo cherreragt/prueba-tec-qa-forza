@@ -1,0 +1,4 @@
+homepage:
+  username: { xpath: "(//div[label[text()='Username:']]/input)[1]" }
+  password: { xpath: "(//div[label[text()='Password:']]/input)[1]" }
+  create: { xpath: "(//div/button[text()='Sign up'])[1]" }

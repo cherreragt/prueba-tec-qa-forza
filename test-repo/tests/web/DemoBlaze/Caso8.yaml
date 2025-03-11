@@ -1,0 +1,45 @@
+actors:
+  - actor: ACTOR1
+    segments:
+      - segment: 1
+        actions:
+          - macro: DemoBlaze.GoTo
+            args:
+              website: "https://www.demoblaze.com/index.html"
+
+          - macro: DemoBlaze.ChooseNavOption
+            args:
+              item: "Log in"
+
+          - macro: DemoBlaze.Login
+            args:
+              username: "cherrera45"
+              password: "cherrera45"
+
+          - macro: DemoBlaze.ChooseCategory
+            args:
+              category: "Laptops"
+
+          - macro: DemoBlaze.AddToCart
+            args:
+              item: "Sony vaio i5"
+
+          - macro: DemoBlaze.ChooseNavOption
+            args:
+              item: "Home "
+
+          - macro: DemoBlaze.ChooseCategory
+            args:
+              category: "Phones"
+
+          - macro: DemoBlaze.AddToCart
+            args:
+              item: "Samsung galaxy s6"
+
+          - macro: DemoBlaze.ChooseNavOption
+            args:
+              item: "Cart"
+
+          - macro: DemoBlaze.PlaceOrder
+          - macro: DemoBlaze.FillModalPlaceOrder
+

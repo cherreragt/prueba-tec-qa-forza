@@ -1,0 +1,2 @@
+homepage:
+  item: { xpath: '//ul/li/a[text()="##item##"]' }

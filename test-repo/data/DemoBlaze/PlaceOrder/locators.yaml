@@ -1,0 +1,4 @@
+homepage:
+  cart: { xpath: '//ul/li/a[text()="Cart"]' }
+  placeOrder: { xpath: '//div/div/button[text()="Place Order"]' }
+  assertOrderPlace: { xpath: '//div/div/h5[text()="Place order"]' }

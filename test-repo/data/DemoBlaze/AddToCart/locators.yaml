@@ -1,0 +1,3 @@
+homepage:
+  item: { xpath: "//h4/a[text()='##item##']" }
+  addToCart: { xpath: '//div/div/a[text()="Add to cart"]' }

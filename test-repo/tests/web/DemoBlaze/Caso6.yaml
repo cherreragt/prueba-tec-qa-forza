@@ -1,0 +1,18 @@
+actors:
+  - actor: ACTOR1
+    segments:
+      - segment: 1
+        actions:
+          - macro: DemoBlaze.GoTo
+            args:
+              website: "https://www.demoblaze.com/index.html"
+
+          - macro: DemoBlaze.ChooseNavOption
+            args:
+              item: "Log in"
+
+          - macro: DemoBlaze.Login
+            args:
+              username: "cherrera45"
+              password: "cherrera45"
+

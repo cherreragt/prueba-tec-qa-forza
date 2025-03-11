@@ -1,0 +1,35 @@
+description: Verify that a GitHub repo has a wiki section with content in it
+actions:
+  - script: |
+      $delay(2000);
+      $runAction("org.getopentest.selenium.SendKeys", {
+          locator: $data("DemoBlaze/ModalPlaceOrder/locators").homepage.name,
+          text: "Christopher Herrera"
+      });
+      $runAction("org.getopentest.selenium.SendKeys", {
+          locator: $data("DemoBlaze/ModalPlaceOrder/locators").homepage.country,
+          text: "Guatemala"
+      });
+      $runAction("org.getopentest.selenium.SendKeys", {
+          locator: $data("DemoBlaze/ModalPlaceOrder/locators").homepage.city,
+          text: "Petapa"
+      });
+      $runAction("org.getopentest.selenium.SendKeys", {
+          locator: $data("DemoBlaze/ModalPlaceOrder/locators").homepage.creditCard,
+          text: "3435535353535454545"
+      });
+      $runAction("org.getopentest.selenium.Click", {
+          locator: $data("DemoBlaze/ModalPlaceOrder/locators").homepage.purchase
+      });
+      $runAction("org.getopentest.selenium.AssertElementVisible", {
+        locator: $data("DemoBlaze/ModalPlaceOrder/locators").homepage.assert
+      });
+      $delay(1000);
+      $runAction("org.getopentest.selenium.Click", {
+        locator: $data("DemoBlaze/ModalPlaceOrder/locators").homepage.ok
+      });
+      $runAction("org.getopentest.selenium.ExecuteScript", {
+        script: "location.reload();"
+      });
+        
+      $delay(4000);
