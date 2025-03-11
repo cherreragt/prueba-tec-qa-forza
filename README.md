@@ -38,3 +38,14 @@ Siguiendo estos pasos, deberías poder iniciar y ejecutar el proyecto correctame
 
 EJ:
 ![image](https://github.com/user-attachments/assets/87147db4-22f0-4842-8617-0f0ca89b49f8)
+
+
+## Entrar en OpenTest
+
+http://localhost:3000/#
+
+
+## Video de la automatizacion: 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tu_video_id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
